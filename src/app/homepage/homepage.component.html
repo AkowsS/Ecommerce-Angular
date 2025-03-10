@@ -2,14 +2,14 @@
 <div class="search-products mt-3">
   <input
     type="text"
-    class="rounded-pill border border-1 w-25 p-1 border-primary"
+    class="rounded-pill border border-1 w-25 p-1 border-dark"
     placeholder="Search..."
     [(ngModel)]="searchTerm"
     (input)="searchProducts()"
   />
 
   <select
-    class="form-select select-category rounded-pill"
+    class="form-select select-category rounded-pill border-dark"
     [(ngModel)]="selectedCategory"
     (change)="filterByCategory()"
   >

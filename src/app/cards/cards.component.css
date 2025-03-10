@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 250px;
   cursor: pointer;
+  background-color: lightgray;
 }
 
 .button-color {
