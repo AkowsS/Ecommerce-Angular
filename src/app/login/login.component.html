@@ -1,0 +1,93 @@
+<div class="d-flex vh-100">
+  <div class="d-flex justify-content-center flex-column login-elements">
+    <div class="mb-4 p-2">
+      <h3 class="text-center">Everything you need in one place!</h3>
+    </div>
+    <h2 class="text-center mb-4">Login</h2>
+
+    <div *ngIf="errorMessage" class="error mb-3 w-100 text-center">
+      <span class="text-danger">{{ errorMessage }}</span>
+    </div>
+
+    <div *ngIf="isLoading" class="text-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p>Loading...</p>
+    </div>
+
+    <form (ngSubmit)="onLogin()" *ngIf="!userData" class="form-style">
+      <div class="d-flex flex-column">
+        <label for="username" class="mb-2 ml-1">Username:</label>
+        <input
+          class="mb-4"
+          type="text"
+          id="username"
+          [(ngModel)]="username"
+          name="username"
+          required
+          placeholder="User"
+        />
+      </div>
+
+      <div class="d-flex flex-column">
+        <label for="password" class="mb-2">Password:</label>
+        <input
+          class="mb-4"
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+          placeholder="Password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary w-25 button-login">
+        Enter
+      </button>
+    </form>
+
+    <div class="text-center mt-5">
+      <a (click)="onReturn()" class="text-decoration-none btn"
+        ><p class="text-muted">Return</p></a
+      >
+      <p>Follow us:</p>
+      <div class="w-100 d-flex align-items-center justify-content-center">
+        <div class="div-icons">
+          <a href="https://instagram.com" target="_blank">
+            <img src="images/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <img src="images/youtube.png" alt="Instagram" />
+          </a>
+          <a href="https://tiktok.com" target="_blank">
+            <img src="images/tiktok.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-elements bg-primary">
+    <div class="div-baner-login p-1">
+      <div class="carousel-container">
+        <img
+          src="images/imageLogin1.jpg"
+          alt="Image 1"
+          class="baner-login rounded-4 active"
+        />
+        <img
+          src="images/imageLogin2.jpeg"
+          alt="Image 2"
+          class="baner-login rounded-4"
+        />
+        <img
+          src="images/imageLogin3.jpg"
+          alt="Image 3"
+          class="baner-login rounded-4"
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div
+  class="d-flex card card-size p-1 shadow-lg"
+  (click)="goToProductDetail(title, description, price, image)"
+>
+  <div class="d-flex align-items-center justify-content-center w-100">
+    <img [src]="image" class="card-img-top image-size" alt="Product Image" />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title text-truncate">{{ title }}</h5>
+    <p class="card-text text-truncate">{{ description }}</p>
+    <p class="card-price">${{ price }}</p>
+    <button class="btn w-100 button-color">Add to Cart</button>
+  </div>
+</div>

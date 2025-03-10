@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-color-header p-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="images/logoMenu.jpg"
+        alt="Logo da Loja"
+        style="width: auto; height: 50px"
+        class="rounded"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse justify-content-end navbar-menu"
+      id="navbarNav"
+    >
+      <div class="options-width">
+        <span
+          *ngIf="user$ | async as user"
+          class="fs-5 fw-bold text-center me-3 text-light"
+          >{{ user.firstName }} {{ user.lastName }}</span
+        >
+
+        <span class="me-3" *ngIf="user$ | async as user">
+          <span class="fs-5 fw-bold text-center me-3 text-light item-name"
+            >My cart</span
+          ><img src="images/cart.png" class="rounded-pill cart-img" />
+        </span>
+
+        <a
+          *ngIf="user$ | async; else loginLink"
+          (click)="logout()"
+          style="cursor: pointer"
+        >
+          <span>
+            <span class="fs-5 fw-bold text-center me-3 text-light item-name"
+              >Logout</span
+            ><img
+              src="images/logoutIcon.PNG"
+              class="rounded-pill cart-img"
+              alt="logout"
+            />
+          </span>
+        </a>
+        <ng-template #loginLink>
+          <span>
+            <span class="fs-5 fw-bold text-center me-3 text-light item-name"
+              >Login</span
+            ><a routerLink="/login"
+              ><img
+                src="images/loginIcon.PNG"
+                class="rounded-pill cart-img"
+                alt="login"
+            /></a>
+          </span>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,112 @@
+h2,
+h3,
+span,
+label {
+  color: #725c3f;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+  padding-left: 15px !important;
+  border: none;
+}
+
+.login-elements {
+  width: 50%;
+}
+
+.banner-elements {
+  width: 50%;
+}
+
+.div-login form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-submit {
+  width: 90px;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-style input {
+  border-radius: 50px;
+  border: 1px solid var(--bs-primary);
+  padding: 0.25rem;
+}
+
+.div-icons {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  max-width: 200px;
+  justify-content: space-between;
+}
+
+.div-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.div-baner-login {
+  height: 100%;
+  width: 100%;
+}
+
+.button-login {
+  max-width: 180px;
+}
+
+.baner-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.baner-login.active {
+  opacity: 1;
+}
+
+@media (max-width: 950px) {
+  h2,
+  h3,
+  span,
+  label,
+  p {
+    color: black;
+    font-weight: 700;
+  }
+  .login-elements {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 50px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    padding: 20px 0;
+  }
+
+  .banner-elements {
+    width: 100%;
+    z-index: 2;
+  }
+}

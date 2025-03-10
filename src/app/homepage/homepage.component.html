@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="search-products mt-3">
+  <input
+    type="text"
+    class="rounded-pill border border-1 w-25 p-1 border-primary"
+    placeholder="Search..."
+    [(ngModel)]="searchTerm"
+    (input)="searchProducts()"
+  />
+
+  <select
+    class="form-select select-category rounded-pill"
+    [(ngModel)]="selectedCategory"
+    (change)="filterByCategory()"
+  >
+    <option value="">All Categories</option>
+    <option *ngFor="let category of categories" [value]="category">
+      {{ category }}
+    </option>
+  </select>
+</div>
+
+<div class="text-center mt-3" *ngIf="loading">
+  <p>Carregando produtos...</p>
+</div>
+
+<div class="w-100 products" *ngIf="!loading">
+  <div class="d-flex flex-wrap justify-content-center">
+    <div *ngFor="let product of filteredProducts" class="m-3">
+      <app-cards
+        [image]="product.thumbnail"
+        [title]="product.title"
+        [description]="product.description"
+        [price]="product.price"
+      >
+      </app-cards>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
