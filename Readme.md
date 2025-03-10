@@ -34,13 +34,6 @@ O projeto está disponível online através da Vercel. Acesse pelo link abaixo:
 
 🔗 **[Acesse a aplicação](https://ecommerce-angular-q33x.vercel.app)**
 
-Caso queira realizar alterações e fazer um novo deploy, siga estes passos:
-
-1. Certifique-se de que o código está atualizado no repositório GitHub.
-2. Conecte o repositório à Vercel e configure as opções necessárias.
-3. A Vercel realizará automaticamente o build e deploy sempre que houver novas alterações na branch principal.
-
-
 ## Como Executar o Projeto
 1. Clone este repositório:
    ```sh
@@ -63,19 +56,7 @@ Caso queira realizar alterações e fazer um novo deploy, siga estes passos:
    http://localhost:4200
    ```
 
-## Critérios de Avaliação
-O projeto foi desenvolvido cumprindo todos os requisitos exigidos e seguindo as melhores práticas, incluindo:
-- Funcionalidade completa e correta.
-- Código organizado e modularizado.
-- Integração eficiente com as APIs.
-- Design intuitivo e responsivo.
-- Criatividade na implementação de funcionalidades.
-
 ## Contato
 Caso tenha alguma dúvida ou sugestão, entre em contato:
 - **Nome:** Ailton Guarinho de Vasconcelos
 - **Email:** ailton.gv@hotmail.com
-
----
-Este README documenta todas as funcionalidades e requisitos do projeto, garantindo uma fácil compreensão para futuros colaboradores ou avaliadores.
-
