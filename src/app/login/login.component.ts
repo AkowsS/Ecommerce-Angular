@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, FormsModule, RouterOutlet],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
