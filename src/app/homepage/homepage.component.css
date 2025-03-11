@@ -31,6 +31,46 @@ select {
   padding: 3rem;
 }
 
+.div-ads{
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.card-ads{
+  min-width: 280px;
+  border-radius: 70px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+  filter: brightness(0.7);
+}
+
+.card-ads:hover {
+  filter: brightness(0.9);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
+}
+.card-ads span{
+  font-size: 25px;
+  color: white;
+  font-weight: 800;
+}
+
+.card-ads p{
+  text-align: right;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}
+
+.card-ads button{
+  margin-right: 8px;
+  max-width: 100px;
+}
+
 @media (max-width: 650px) {
   .cards-center {
     justify-content: center;
@@ -45,5 +85,11 @@ select {
   .products {
     padding: 0;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .ad{
+    display: none!important;
   }
 }

@@ -5,6 +5,7 @@ import { ApiDummyService } from '../services/api-dummy.service';
 import { HeaderComponent } from '../header/header.component';
 import { CardsComponent } from '../cards/cards.component';
 import { RouterOutlet } from '@angular/router';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-homepage',
@@ -36,23 +37,25 @@ export class HomepageComponent implements OnInit {
 
   loadProducts(): void {
     this.loading = true;
-    this.apiDummyService.getProducts().subscribe({
-      next: (data: any) => {
-        if (data && data.products) {
-          this.products = data.products;
-          this.filteredProducts = data.products;
-        } else {
-          this.products = [];
-          this.filteredProducts = [];
-        }
-      },
-      error: (error) => {
-        console.error('Error loading products:', error);
-      },
-      complete: () => {
-        this.loading = false;
-      },
-    });
+    setTimeout(()=>{
+      this.apiDummyService.getProducts().subscribe({
+        next: (data: any) => {
+          if (data && data.products) {
+            this.products = data.products;
+            this.filteredProducts = data.products;
+          } else {
+            this.products = [];
+            this.filteredProducts = [];
+          }
+        },
+        error: (error) => {
+          console.error('Error loading products:', error);
+        },
+        complete: () => {
+          this.loading = false;
+        },
+      });
+    },1000);
   }
 
   loadCategories(): void {
@@ -91,5 +94,12 @@ export class HomepageComponent implements OnInit {
 
   searchProducts(): void {
     this.applyFilters();
+  }
+
+  scrollToSearchProducts() {
+    const element = document.querySelector('.search-products');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }

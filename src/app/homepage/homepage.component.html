@@ -1,5 +1,34 @@
 <app-header></app-header>
-<div class="search-products mt-3">
+
+<div class="w-100 ad mt-3">
+  <div class="div-ads d-flex justify-content-evenly">
+    <div class="card-ads d-flex flex-column w-25 justify-content-end" style="background-image: url('/images/jordanImg.jpg');">
+      <div class="d-flex align-items-end flex-column">
+        <span>Shoes</span>
+        <p>Steady steps, unbeatable style discover the perfect sneaker for you!</p>
+        <button class="btn btn-light">Buy now</button>
+      </div>
+    </div>
+
+    <div class="card-ads d-flex flex-column w-25 justify-content-end" style="background-image: url('/images/lookImg.jpg');">
+      <div class="d-flex align-items-end flex-column">
+        <span>Outfit</span>
+        <p>Fashion that suits you comfort, style and attitude in every piece!</p>
+        <button class="btn btn-light">Buy now</button>
+      </div>
+    </div>
+
+    <div class="card-ads d-flex flex-column w-25 justify-content-end" style="background-image: url('/images/notebookImg.jpg');">
+      <div class="d-flex align-items-end flex-column">
+        <span>Tech</span>
+        <p>Innovation at your fingertips discover the latest in technology!</p>
+        <button class="btn btn-light">Buy now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="search-products" (click)="scrollToSearchProducts()">
   <input
     type="text"
     class="rounded-pill border border-1 w-25 p-1 border-dark"
@@ -20,11 +49,12 @@
   </select>
 </div>
 
-<div class="text-center mt-3" *ngIf="loading">
+
+<div class="text-center m-3" *ngIf="loading">
   <p>Carregando produtos...</p>
 </div>
 
-<div class="w-100 products" *ngIf="!loading">
+<div class="w-100 products mt-3" *ngIf="!loading">
   <div class="d-flex flex-wrap justify-content-center">
     <div *ngFor="let product of filteredProducts" class="m-3">
       <app-cards
