@@ -71,7 +71,10 @@ select {
   max-width: 100px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 950px) {
+  .ad{
+    display: none!important;
+  }
   .cards-center {
     justify-content: center;
   }
@@ -85,11 +88,5 @@ select {
   .products {
     padding: 0;
     margin-top: 20px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .ad{
-    display: none!important;
   }
 }
