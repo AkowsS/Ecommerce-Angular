@@ -72,9 +72,6 @@ select {
 }
 
 @media (max-width: 950px) {
-  .ad{
-    display: none!important;
-  }
   .cards-center {
     justify-content: center;
   }
